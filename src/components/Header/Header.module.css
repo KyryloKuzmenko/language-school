@@ -1,0 +1,78 @@
+.header {
+    height: 91px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+}
+
+.headerWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigate {
+  display: flex;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  gap: 21px;
+  margin-left: 50px;
+}
+
+.listLink {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.71429;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #737373;
+}
+
+.address {
+  font-style: normal;
+  margin-left: 150px;
+}
+
+.listAddress {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+  padding-left: 120px;
+}
+
+.addressLink {
+  white-space: nowrap;
+}
+
+.contactFormBtn {
+  border-radius: 5px;
+  padding: 15px 25px;
+  width: 137px;
+  height: 52px;
+  background: #96bb7c;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.57143;
+  letter-spacing: 0.01em;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.contactFormBtn:hover {
+  background-color: #7ea05f;
+}
+
+.contactFormBtn:active {
+  background-color: #6b8f4a; 
+}
+
+
+
+
