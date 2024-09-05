@@ -46,9 +46,9 @@ const Hero = () => {
           className={style.heroImg}
           srcSet="
             /src/assets/img/x2/girl-person@2x.png 2x,
-            /src/assets/img/girl-person.png
+            /img/girl-person.png
             "
-          src="/src/assets/img/girl-person.png"
+          src="/img/girl-person.png"
           alt="Girl Photo"
         />
       </div>
