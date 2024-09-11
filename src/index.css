@@ -23,7 +23,8 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+body {
   margin: 0;
 }
 
@@ -45,8 +46,6 @@ button {
 
 img {
   display: block;
-  max-width: 100%;
-  height: auto;
 }
 
 
@@ -57,61 +56,16 @@ img {
   margin: 0 auto;
 }
 
-#root {
-  position: relative;
-  z-index: 1; /* Чтобы контент был поверх квадрата */
-}
 
-
-
-#background-left, #background-right {
+.decor-wrap {
   position: absolute;
-  border-radius: 20%; /* Закругление углов */
-  background: #FFAB71; /* Цвет фона */
-  z-index: -1; /* Чтобы квадраты были позади контента */
+  z-index: -5;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
-#background-left {
-  top: -90px;
-  left: -250px;
-  width: 400px; /* Ширина квадрата */
-  height: 400px; /* Высота квадрата */
-  transform: translateY(-40%); /* Центрируем вертикально относительно верхнего края */
+.decor-left {
+  height: 180px;
 }
-
-#background-right {
-  top: -30px;
-  right: -210px;
-  width: 400px; /* Ширина квадрата */
-  height: 300px; /* Высота квадрата */
-  transform: translateY(-20%); /* Центрируем вертикально относительно верхнего края */
-}
-
-/* #background-left {
-  position: absolute;
-  top: -110px;
-  right: -210px;
-  width: 400px; 
-  height: 400px; 
-  border-radius: 20%; 
-  background: #FFAB71; 
-  overflow: hidden;
-  z-index: -1; 
-}
-
-
-#background-right {
-  position: absolute;
-  top: -110px;
-  left: -310px;
-  width: 400px; 
-  height: 300px; 
-  border-radius: 20%; 
-  background: #FFAB71; 
-  overflow: hidden;
-  z-index: -1; 
-} */
-
-
-
 

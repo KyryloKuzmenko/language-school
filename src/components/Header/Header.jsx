@@ -61,11 +61,6 @@ const Header = () => {
                   fill="white"
                 />
               </g>
-              <defs>
-                <clipPath id="clip0_2636_2027">
-                  <rect width="12" height="10" fill="white" />
-                </clipPath>
-              </defs>
             </svg>
           </span>
         </a>

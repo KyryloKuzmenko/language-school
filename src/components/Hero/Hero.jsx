@@ -2,7 +2,7 @@ import style from './Hero.module.css';
 
 const Hero = () => {
   return (
-    <section className={`${style.heroSection} ${style.container}`}>
+    <section className={`${style.heroSection} container`}>
       <div className={style.wrapHero}>
         <a className={style.linkJoinUs} href="#join-us">
           Join Us
@@ -18,30 +18,7 @@ const Hero = () => {
         </div>
       </div>
       <div className={`${style.heroPictureContainer} `}>
-        <svg width="110" height="262" className={style.vector1}>
-          <use href="/assets/icons/vectors.svg#vector1"></use>
-        </svg>
-        <svg width="49" height="212" className={style.vector2}>
-          <use href="/assets/icons/vectors.svg#vector2"></use>
-        </svg>
-        <svg width="265" height="261" className={style.vector3}>
-          <use href="/assets/icons/vectors.svg#vector3"></use>
-        </svg>
-        <svg width="120" height="171" className={style.vector4}>
-          <use href="/assets/icons/vectors.svg#vector4"></use>
-        </svg>
-        <svg width="106" height="112" className={style.vector5}>
-          <use href="/assets/icons/vectors.svg#vector5"></use>
-        </svg>
-        <svg width="230" height="240" className={style.vector6}>
-          <use href="/assets/icons/vectors.svg#vector6"></use>
-        </svg>
-        <svg width="464" height="430" className={style.vector7}>
-          <use href="/assets/icons/vectors.svg#vector7"></use>
-        </svg>
-        <svg width="195" height="224" className={style.vector8}>
-          <use href="/assets/icons/vectors.svg#vector8"></use>
-        </svg>
+        <img className={style.bground} src="/public/assets/img/background-removebg-preview.png" alt="background"/>
         <img
           className={style.heroImg}
           srcSet="

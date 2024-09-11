@@ -77,73 +77,26 @@
   border: 1px solid #6b8f4a;
 }
 
+
 .heroPictureContainer {
   position: relative;
-  width: 704px;
-  margin-left: 30px;
+  width: 100%;
+  max-width: 585px;
+  display: flex;
+  align-items: center;
 }
 
-/* vectors */
-.vector1 {
-  z-index: 1;
+.bground {
+  z-index: -1;
   position: absolute;
-  top: 158.32px; /* Замените нужным значением Y */
-  left: 0.16px; /* Замените нужным значением X */
-}
-
-.vector2 {
-  z-index: 2;
-  position: absolute;
-  top: 354.82px; /* Замените нужным значением Y */
-  left: 478.83px;/* Замените нужным значением X */
-}
-
-.vector3 {
-  z-index: 8;
-  position: absolute;
-  top: 180.22px; /* Замените нужным значением Y */
-  left: 201.13px; /* Замените нужным значением X */
-}
-
-.vector4 {
-  z-index: 9;
-  position: absolute;
-  top: 406.45px; /* Замените нужным значением Y */
-  left: 68.42px;/* Замените нужным значением X */
-}
-
-.vector5 {
-  z-index: 5;
-  position: absolute;
-  top: 163.54px; /* Замените нужным значением Y */
-  left: 82.3px; /* Замените нужным значением X */
-}
-
-.vector6 {
-  z-index: 8;
-  position: absolute;
-  top: 397.21px; /* Замените нужным значением Y */
-  left: 0; /* Замените нужным значением X */
-}
-
-.vector7 {
-  z-index: 7;
-  position: absolute;
-  top: 170.99px;  /* Замените нужным значением Y */
-  left: 39.51px; /* Замените нужным значением X */
-}
-
-.vector8 {
-  z-index: 6;
-  position: absolute;
-  top: 140.54px; /* Замените нужным значением Y */
-  left: 337.15px; /* Замените нужным значением X */
 }
 
 .heroImg {
   position: absolute;
-  top: 0;
-  left: 7.4px;
-  z-index: 9;
 }
+
+
+
+
+
 
