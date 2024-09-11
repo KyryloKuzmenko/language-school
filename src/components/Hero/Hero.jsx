@@ -18,7 +18,7 @@ const Hero = () => {
         </div>
       </div>
       <div className={`${style.heroPictureContainer} `}>
-        <img className={style.bground} src="/public/assets/img/background-removebg-preview.png" alt="background"/>
+        <img className={style.bground} src="/assets/img/background-removebg-preview.png" alt="background"/>
         <img
           className={style.heroImg}
           srcSet="
