@@ -11,41 +11,45 @@ const HeaderMenu = () => {
   };
 
     return (
-        <>
+      <>
         {!isMenuOpen ? (
-            <button className={css.menuButton} onClick={toggleMenu}>
-            Menu
-            </button>
+          <button className={css.menuButton} onClick={toggleMenu}>
+            <svg class={css.menuOpenButtonSvg} width="28" height="28">
+              <use href="/assets/icons/vectors.svg#icon-btn-burger-menu"></use>
+            </svg>
+          </button>
         ) : (
-            <button className={css.closeButton} onClick={toggleMenu}>
-            X
-            </button>
+          <button className={css.closeButton} onClick={toggleMenu}>
+            <svg class={`${css.menuOpenButtonSvg}`} width="28px" height="28px">
+              <use href="/assets/icons/vectors.svg#icon-btn-close-modal"></use>
+            </svg>
+          </button>
         )}
         <div className={`${css.menu} ${isMenuOpen ? css.open : ''}`}>
-        <ul className={css.list}>
-          <li className={css.listItem}>
-            <a className={css.listLink} href="/">
-              Home
-            </a>
-          </li>
-          <li className={css.listItem}>
-            <a className={css.listLink} href="product">
-              Product
-            </a>
-          </li>
-          <li className={css.listItem}>
-            <a className={css.listLink} href="pricing">
-              Pricing
-            </a>
-          </li>
-          <li className={css.listItem}>
-            <a className={css.listLink} href="contact">
-              Contact
-            </a>
-          </li>
-        </ul>
-      </div>
-        </>
+          <ul className={css.list}>
+            <li className={css.listItem}>
+              <a className={css.listLink} href="/">
+                Home
+              </a>
+            </li>
+            <li className={css.listItem}>
+              <a className={css.listLink} href="product">
+                Product
+              </a>
+            </li>
+            <li className={css.listItem}>
+              <a className={css.listLink} href="pricing">
+                Pricing
+              </a>
+            </li>
+            <li className={css.listItem}>
+              <a className={css.listLink} href="contact">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      </>
     );
 }
 

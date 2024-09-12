@@ -10,6 +10,7 @@
 .headerWrap {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .navigate {
@@ -18,7 +19,9 @@
   align-items: center;
 }
 
-/* Меню скрыто на мобильных устройствах по умолчанию */
+.brand {
+  z-index: 1001;
+}
 
 
 .address {

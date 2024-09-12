@@ -2,16 +2,32 @@
   display: none;
 }
 
-.menuButton,
-.closeButton {
-  display: block;
-  background-color: #007bff;
-  color: #ffffff;
+.menuButton {
   border: none;
-  padding: 8px 16px;
   cursor: pointer;
-  font-size: 16px;
-  border-radius: 4px;
+}
+
+.menuButton {
+    background: transparent;
+    width: 28px;
+    height: 28px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.closeButton,
+.menuOpenButtonSvg {
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  stroke: #234d25;
+  stroke-width: 2;
 }
 
 .hidenListItem:not(:last-child) {
@@ -24,12 +40,26 @@
 
 /* Стили для кнопки закрытия меню */
 .closeButton {
-  background-color: #ff4c4c; /* Красный цвет для кнопки закрытия */
+  z-index: 1001;
 }
 
 /* Показывать меню, если оно открыто */
 .menu.open {
-  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* background: linear-gradient(90deg, #96bb7c, #a8d18d, #6d8a59); */
+  background: linear-gradient(
+    45deg,
+    rgba(150, 187, 124, 1),
+    rgba(150, 187, 124, 0.5)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
 /* Медиа-запросы для планшетов и компьютеров */
@@ -42,7 +72,6 @@
     display: flex;
     gap: 20px;
   }
-
 
   .menuButton,
   .closeButton {
@@ -58,7 +87,6 @@
   cursor: pointer;
   line-height: 0;
 }
-
 
 @media only screen and (min-width: 1440px) {
   .list {
