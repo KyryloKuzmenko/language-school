@@ -1,0 +1,67 @@
+.menu {
+  display: none;
+}
+
+.menuButton,
+.closeButton {
+  display: block;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.hidenListItem:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.listItem:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+/* Стили для кнопки закрытия меню */
+.closeButton {
+  background-color: #ff4c4c; /* Красный цвет для кнопки закрытия */
+}
+
+/* Показывать меню, если оно открыто */
+.menu.open {
+  display: block;
+}
+
+/* Медиа-запросы для планшетов и компьютеров */
+@media (min-width: 768px) {
+  .menu {
+    display: block; /* Показывать меню по умолчанию на планшетах и компьютерах */
+  }
+
+  .list {
+    display: flex;
+    gap: 20px;
+  }
+
+
+  .menuButton,
+  .closeButton {
+    display: none; /* Скрыть кнопки "Menu" и "X" на планшетах и компьютерах */
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 32px;
+  right: 16px;
+  padding: 0;
+  cursor: pointer;
+  line-height: 0;
+}
+
+
+@media only screen and (min-width: 1440px) {
+  .list {
+    transform: translate(0);
+  }
+}

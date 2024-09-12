@@ -1,5 +1,5 @@
 .heroSection {
-  display: flex;
+  display: none;
   justify-content: space-between;
   height: 682px;
 }

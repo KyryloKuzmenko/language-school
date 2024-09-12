@@ -48,15 +48,6 @@ img {
   display: block;
 }
 
-
-
-.container {
-  padding-left: 60px;
-  padding-right: 60px;
-  margin: 0 auto;
-}
-
-
 .decor-wrap {
   position: absolute;
   z-index: -5;
@@ -65,7 +56,45 @@ img {
   justify-content: space-between;
 }
 
+.decor-right {
+  height: 250px;
+}
+
 .decor-left {
   height: 180px;
 }
 
+.container {
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 375px) {
+  .container {
+    max-width: 375px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
+
+  .decor-left {
+    height: 180px;
+  }
+  .decor-right {
+    height: 250px;
+  }
+}
