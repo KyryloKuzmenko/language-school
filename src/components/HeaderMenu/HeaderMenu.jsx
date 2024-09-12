@@ -20,7 +20,7 @@ const HeaderMenu = () => {
           </button>
         ) : (
           <button className={css.closeButton} onClick={toggleMenu}>
-            <svg class={`${css.menuOpenButtonSvg}`} width="28px" height="28px">
+            <svg class={`${css.closeModalIcon}`} width="38px" height="38px">
               <use href="/assets/icons/vectors.svg#icon-btn-close-modal"></use>
             </svg>
           </button>

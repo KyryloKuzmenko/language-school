@@ -2,32 +2,26 @@
   display: none;
 }
 
-.menuButton {
-  border: none;
-  cursor: pointer;
-}
 
+
+.closeButton,
 .menuButton {
     background: transparent;
-    width: 28px;
-    height: 28px;
+    width: 38px;
+    height: 38px;
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    stroke: #2E7D32;
 }
 
-.closeButton,
-.menuOpenButtonSvg {
-  background: transparent;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  stroke: #234d25;
-  stroke-width: 2;
+.menuOpenButtonSvg
+.closeModalIcon {
+    width: 28px;
+    height: 28px;
+    stroke: #2E7D32;
+    stroke-width: 2;
 }
 
 .hidenListItem:not(:last-child) {
