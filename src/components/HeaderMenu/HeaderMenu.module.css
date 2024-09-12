@@ -16,8 +16,14 @@
 
 .menuButton {
   position: fixed;
-  top: 16px; /* Отступ от верха */
+  top: 23px; /* Отступ от верха */
   right: 16px; /* Отступ от левого края */
+}
+
+.closeButton {
+  position: absolute;
+  top: 23px;
+  right: 16px;
 }
 
 .menuOpenButtonSvg
@@ -27,6 +33,7 @@
     stroke: #2E7D32;
     stroke-width: 2;
 }
+
 
 .hidenListItem:not(:last-child) {
   margin-bottom: 5px;
@@ -77,14 +84,6 @@
   }
 }
 
-.closeButton {
-  position: absolute;
-  top: 32px;
-  right: 16px;
-  padding: 0;
-  cursor: pointer;
-  line-height: 0;
-}
 
 @media only screen and (min-width: 1440px) {
   .list {
