@@ -2,8 +2,6 @@
   display: none;
 }
 
-
-
 .closeButton,
 .menuButton {
     background: transparent;
@@ -14,6 +12,12 @@
     align-items: center;
     justify-content: center;
     stroke: #2E7D32;
+}
+
+.menuButton {
+  position: fixed;
+  top: 16px; /* Отступ от верха */
+  right: 16px; /* Отступ от левого края */
 }
 
 .menuOpenButtonSvg
