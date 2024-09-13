@@ -1,5 +1,7 @@
 
 .linkJoinUs {
+  display: block;
+  margin-top: 15px;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.01em;
