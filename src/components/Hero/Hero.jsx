@@ -8,6 +8,22 @@ const Hero = () => {
           Join Us
         </a>
         <h1 className={style.heroTitle}>HIGH QUALITY COURSES </h1>
+        <div className={`${style.heroPictureContainer}`}>
+          <img
+            className={style.bground}
+            src="/assets/img/background-removebg-preview.png"
+            alt="background"
+          />
+          <img
+            className={style.heroImg}
+            srcSet="
+              /assets/img/x2/girl-person@2x.png 2x,
+              /assets/img/girl-person.png
+              "
+            src="/assets/img/girl-person.png"
+            alt="Girl Photo"
+          />
+        </div>
         <p className={style.text}>
           Every day brings with it a fresh set of learning possibilities.
         </p>
@@ -17,7 +33,7 @@ const Hero = () => {
           <button className={style.learnMore}>Learn More</button>
         </div>
       </div>
-      <div className={`${style.heroPictureContainer} `}>
+      {/* <div className={`${style.heroPictureContainer} `}>
         <img className={style.bground} src="/assets/img/background-removebg-preview.png" alt="background"/>
         <img
           className={style.heroImg}
@@ -28,7 +44,7 @@ const Hero = () => {
           src="/assets/img/girl-person.png"
           alt="Girl Photo"
         />
-      </div>
+      </div> */}
     </section>
   );
 };

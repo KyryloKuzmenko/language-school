@@ -10,6 +10,12 @@ const HeaderMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleBackDropClick = (e) => {
+    if (e.target === e.currentTarget) {
+      setIsMenuOpen(false);
+    }
+  }
+
     return (
       <>
         {!isMenuOpen ? (
@@ -25,7 +31,8 @@ const HeaderMenu = () => {
             </svg>
           </button>
         )}
-        <div className={`${css.menu} ${isMenuOpen ? css.open : ''}`}>
+        <div className={`${css.menu} ${isMenuOpen ? css.open : ''}`}
+        onClick={handleBackDropClick}>
           <ul className={css.list}>
             <li className={css.listItem}>
               <a className={css.listLink} href="/">

@@ -14,10 +14,12 @@
     stroke: #2E7D32;
 }
 
+
 .menuButton {
-  position: fixed;
+  position: absolute;
   top: 23px; /* Отступ от верха */
   right: 16px; /* Отступ от левого края */
+  stroke: #2E7D32;
 }
 
 .closeButton {
@@ -32,6 +34,20 @@
     height: 28px;
     stroke: #2E7D32;
     stroke-width: 2;
+}
+
+.closeModalIcon {
+  stroke: #FAF3E0;
+}
+
+.listLink {
+  font-weight: 700;
+font-size: 14px;
+line-height: 1.71429;
+letter-spacing: 0.01em;
+text-align: center;
+text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  color: #FAF3E0;
 }
 
 
@@ -78,6 +94,11 @@
     gap: 20px;
   }
 
+  .listLink {
+    color: #737373;
+    text-shadow: none;
+  }
+
   .menuButton,
   .closeButton {
     display: none; /* Скрыть кнопки "Menu" и "X" на планшетах и компьютерах */
@@ -88,5 +109,6 @@
 @media only screen and (min-width: 1440px) {
   .list {
     transform: translate(0);
+    gap: 50px;
   }
 }

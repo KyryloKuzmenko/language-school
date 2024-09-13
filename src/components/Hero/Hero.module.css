@@ -1,8 +1,3 @@
-.heroSection {
-  display: none;
-  justify-content: space-between;
-  height: 682px;
-}
 
 .linkJoinUs {
   font-size: 16px;
@@ -12,91 +7,57 @@
 }
 
 .heroTitle {
-  margin-top: 30px;
-  font-size: 58px;
+  margin-top: 15px;
   line-height: 1.37931;
-  letter-spacing: 0em;
   color: #252b42;
+  font-weight: 700;
+  font-size: 29px;
+}
+
+.bground {
+  max-width: 285px;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+}
+
+.heroPictureContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .text {
-  margin-top: 30px;
-}
-
-.wrapHero {
-  max-width: 575px;
-  padding-left: 132px;
-  padding-top: 148px;
-  padding-bottom: 148px;
+  margin-top: 20px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  color: #737373;
 }
 
 .btnWrap {
-  margin-top: 30px;
+  margin-top: 10px;
   display: flex;
   gap: 10px;
 }
 
 .joinUs {
-  border: none;
-  border-radius: 5px;
-  padding: 15px 40px;
-  width: 133px;
-  height: 52px;
-  background: #96bb7c;
-  font-size: 14px;
   line-height: 1.57143;
   letter-spacing: 0.01em;
   text-align: center;
   color: #fff;
-}
-
-.joinUs:hover {
-    background-color: #7ea05f;
-}
-
-.joinUs:active {
-    background-color: #6b8f4a; 
+  background: #96bb7c;
+  border: none;
+  border-radius: 5px;
+  padding: 7px 20px;
 }
 
 .learnMore {
-  border: 1px solid #96bb7c;
-  border-radius: 5px;
-  padding: 15px 40px;
-  width: 163px;
-  height: 52px;
-  font-size: 14px;
-  line-height: 1.57143;
+      line-height: 1.57143;
   letter-spacing: 0.01em;
   text-align: center;
   color: #96bb7c;
-  background-color: #fff;
+  background: #ffffff;
+  border: 1px solid ;
+  border-radius: 5px;
+  padding: 7px 20px;
 }
-
-.learnMore:hover {
-  color: #6b8f4a;
-  border: 1px solid #6b8f4a;
-}
-
-
-.heroPictureContainer {
-  position: relative;
-  width: 100%;
-  max-width: 585px;
-  display: flex;
-  align-items: center;
-}
-
-.bground {
-  z-index: -1;
-  position: absolute;
-}
-
-.heroImg {
-  position: absolute;
-}
-
-
-
-
-
-
