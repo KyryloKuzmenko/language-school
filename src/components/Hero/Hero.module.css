@@ -65,6 +65,10 @@
   padding: 7px 20px;
 }
 
+.heroPictureWrap {
+  display: none;
+}
+
 
 @media only screen and (min-width: 768px) {
   .heroSection{
@@ -75,20 +79,24 @@
     align-items: center;
   }
   .wrapHero {
-    max-width: 573px;
-    height: 100%;
     align-items: center;
+    display: flex;
+    justify-content: space-between;
   }
   .heroPictureContainer {
-    width: 700px;
-    position: absolute;
-    top: 0;
-    right: 0;
+    display: none;
   }
 
-  .bground {
-    width: 535px;
-    height: 460px;
+  .heroPictureWrap {
+    min-width: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bgroundPC {
+    position: absolute;
+    z-index: -1;
   }
 
 
