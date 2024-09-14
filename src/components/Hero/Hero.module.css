@@ -1,6 +1,6 @@
 
 .linkJoinUs {
-  display: block;
+  display: inline-block;
   margin-top: 15px;
   font-size: 16px;
   line-height: 1.5;
@@ -17,8 +17,8 @@
 }
 
 .bground {
-    width: 100%;
-  height: 320px;
+  /* width: 100%;
+  height: 320px; */
   z-index: -1;
   position: absolute;
 }
@@ -55,7 +55,7 @@
 }
 
 .learnMore {
-      line-height: 1.57143;
+  line-height: 1.57143;
   letter-spacing: 0.01em;
   text-align: center;
   color: #96bb7c;
@@ -63,4 +63,48 @@
   border: 1px solid ;
   border-radius: 5px;
   padding: 7px 20px;
+}
+
+
+@media only screen and (min-width: 768px) {
+  .heroSection{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    min-height: 680px;
+    align-items: center;
+  }
+  .wrapHero {
+    max-width: 573px;
+    height: 100%;
+    align-items: center;
+  }
+  .heroPictureContainer {
+    width: 700px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .bground {
+    width: 535px;
+    height: 460px;
+  }
+
+
+  .heroTitle {
+    font-size: 58px;
+  }
+
+  .text {
+    font-size: 22px;
+  }
+
+  .joinUs {
+    padding: 15px 40px;
+  }
+
+  .linkJoinUs {
+    font-size: 20px;
+  }
 }

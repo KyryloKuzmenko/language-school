@@ -20,13 +20,13 @@ const HeaderMenu = () => {
       <>
         {!isMenuOpen ? (
           <button className={css.menuButton} onClick={toggleMenu}>
-            <svg class={css.menuOpenButtonSvg} width="28" height="28">
+            <svg className={css.menuOpenButtonSvg} width="28" height="28">
               <use href="/assets/icons/vectors.svg#icon-btn-burger-menu"></use>
             </svg>
           </button>
         ) : (
           <button className={css.closeButton} onClick={toggleMenu}>
-            <svg class={`${css.closeModalIcon}`} width="38px" height="38px">
+            <svg className={`${css.closeModalIcon}`} width="38px" height="38px">
               <use href="/assets/icons/vectors.svg#icon-btn-close-modal"></use>
             </svg>
           </button>

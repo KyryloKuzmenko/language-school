@@ -1,5 +1,4 @@
 .header {
-  /* position: absolute; */
   width: 100%;
   background: transparent;
   padding-top: 32px;
@@ -14,6 +13,7 @@
   align-items: center;
 }
 
+
 .navigate {
   display: flex;
   justify-content: space-between;
@@ -22,6 +22,9 @@
 
 .brand {
   z-index: 1001;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -30,6 +33,7 @@
 }
 
 @media only screen and (min-width: 768px) {
+
   .navigate {
     justify-content: center;
   }

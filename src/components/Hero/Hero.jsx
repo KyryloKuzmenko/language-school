@@ -13,6 +13,8 @@ const Hero = () => {
             className={style.bground}
             src="/assets/img/background-removebg-preview.png"
             alt="background"
+            width="350"
+            height="300"
           />
           <img
             className={style.heroImg}
@@ -33,18 +35,6 @@ const Hero = () => {
           <button className={style.learnMore}>Learn More</button>
         </div>
       </div>
-      {/* <div className={`${style.heroPictureContainer} `}>
-        <img className={style.bground} src="/assets/img/background-removebg-preview.png" alt="background"/>
-        <img
-          className={style.heroImg}
-          srcSet="
-            /assets/img/x2/girl-person@2x.png 2x,
-            /assets/img/girl-person.png
-            "
-          src="/assets/img/girl-person.png"
-          alt="Girl Photo"
-        />
-      </div> */}
     </section>
   );
 };

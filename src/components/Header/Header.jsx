@@ -1,6 +1,5 @@
 import css from './Header.module.css';
 import HeaderMenu from '../HeaderMenu/HeaderMenu';
-import { useState } from 'react';
 import JoinUs from '../JoinUs/JoinUs';
 const Header = () => {
 
@@ -8,9 +7,11 @@ const Header = () => {
     <>
       <header className={css.header}>
         <div className={`${css.headerWrap} container`}>
-            <span className={css.brand}>
-              <a href="/">Brand</a>
-            </span>
+          <span className={css.brand}>
+            <a href="/">
+              <img src="/public/assets/icons/image2vector.svg" alt="" width="50"/>
+            </a>
+          </span>
           <nav className={css.navigate}>
             <HeaderMenu className={css.headerMenu} />
           </nav>
