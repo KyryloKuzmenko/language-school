@@ -9,7 +9,7 @@ const Header = () => {
         <div className={`${css.headerWrap} container`}>
           <span className={css.brand}>
             <a href="/">
-              <img src="/public/assets/icons/image2vector.svg" alt="" width="50"/>
+              <img src="/assets/icons/image2vector.svg" alt="" width="50"/>
             </a>
           </span>
           <nav className={css.navigate}>
