@@ -6,7 +6,27 @@
   align-items: center;
 }
 
-.title {
+.imgWrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.aboutUsImg {
+  margin-top: 15px;
+  width: calc(
+    50% - 10px
+  ); /* Картинки занимают половину ширины контейнера, минус отступ */
+  margin-bottom: 10px; /* Отступ между картинками по вертикали */
+  height: auto; /* Поддержание пропорций изображения */
+}
+
+.titlePC {
+  display: none;
+}
+
+.titleMobile {
+  display: block;
   font-weight: 700;
   font-size: 25px;
   line-height: 1.25;
@@ -25,7 +45,27 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .title {
+  .titleMobile {
+    display: none;
+  }
+
+  .titlePC {
+    display: block;
+    font-weight: 700;
     font-size: 40px;
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #252b42;
+  }
+
+  .wrap {
+    flex-direction: row;
+  }
+
+  .text {
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 600px;
   }
 }
