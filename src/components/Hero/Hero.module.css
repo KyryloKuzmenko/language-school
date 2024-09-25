@@ -1,4 +1,3 @@
-
 .linkJoinUs {
   display: inline-block;
   margin-top: 15px;
@@ -17,8 +16,6 @@
 }
 
 .bground {
-  /* width: 100%;
-  height: 320px; */
   z-index: -1;
   position: absolute;
 }
@@ -60,7 +57,7 @@
   text-align: center;
   color: #96bb7c;
   background: #ffffff;
-  border: 1px solid ;
+  border: 1px solid;
   border-radius: 5px;
   padding: 7px 20px;
 }
@@ -69,36 +66,71 @@
   display: none;
 }
 
-
 @media only screen and (min-width: 768px) {
-  .heroSection{
-    position: relative;
+  .heroSection {
     display: flex;
     justify-content: space-between;
-    min-height: 680px;
-    align-items: center;
+    max-height: 480px;
   }
   .wrapHero {
+    width: 100%;
     align-items: center;
     display: flex;
     justify-content: space-between;
+  }
+  .hero {
+    max-width: 300px;
   }
   .heroPictureContainer {
     display: none;
   }
 
   .heroPictureWrap {
-    min-width: 750px;
+    max-width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .bgroundPC {
+    max-width: 350px;
     position: absolute;
     z-index: -1;
   }
 
+  .heroTitle {
+    font-size: 38px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+
+  .joinUs {
+    display: inline-block;
+    padding: 7px 20px;
+    white-space: nowrap;
+  }
+
+  .learnMore {
+    display: inline-block;
+    padding: 7px 20px;
+    white-space: nowrap;
+  }
+
+  .linkJoinUs {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .heroSection {
+    min-height: 680px;
+  }
+
+  .hero {
+    max-width: 570px;
+  }
 
   .heroTitle {
     font-size: 58px;
@@ -112,7 +144,19 @@
     padding: 15px 40px;
   }
 
+  .learnMore {
+    padding: 15px 40px;
+  }
+
   .linkJoinUs {
     font-size: 20px;
   }
+
+  .heroPictureWrap {
+    max-width: 600px;
+  }
+
+    .bgroundPC {
+    max-width: 100%;
+    }
 }

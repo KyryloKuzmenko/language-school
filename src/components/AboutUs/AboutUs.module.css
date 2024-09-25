@@ -1,3 +1,5 @@
+
+
 .wrap {
   margin-top: 30px;
   display: flex;
@@ -10,15 +12,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 10px;
+  min-width: 300px;
 }
 
 .aboutUsImg {
-  margin-top: 15px;
-  width: calc(
+    width: calc(
     50% - 10px
   ); /* Картинки занимают половину ширины контейнера, минус отступ */
-  margin-bottom: 10px; /* Отступ между картинками по вертикали */
-  height: auto; /* Поддержание пропорций изображения */
+  height: auto; 
+  max-width: 100%; 
 }
 
 .titlePC {
@@ -33,6 +36,7 @@
   letter-spacing: 0.01em;
   text-align: center;
   color: #252b42;
+  margin-bottom: 20px;
 }
 
 .text {
@@ -45,6 +49,15 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .aboutUsWrap {
+    display: flex;
+    align-items: center;
+  }
+
+  .aboutUsImg {
+    flex: 0 1 calc(50% - 10px); /* Продолжаем использовать две картинки по горизонтали */
+  }
+
   .titleMobile {
     display: none;
   }
@@ -59,13 +72,19 @@
     color: #252b42;
   }
 
-  .wrap {
-    flex-direction: row;
+  .imgWrap {
+    justify-content: flex-start;
   }
 
-  .text {
-    margin-left: 50px;
-    margin-right: 50px;
-    width: 600px;
+}
+
+
+@media only screen and (min-width: 1440px) {
+  .aboutUsImg {
+    flex: 0 1 calc(50% - 10px); /* Продолжаем использовать две картинки по горизонтали */
+  }
+
+  .imgWrap {
+     min-width: 800px;
   }
 }

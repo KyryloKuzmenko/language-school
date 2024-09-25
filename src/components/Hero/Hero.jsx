@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section className={`${style.heroSection} container`}>
       <div className={style.wrapHero}>
-        <div>
+        <div className={style.hero}>
           <a className={style.linkJoinUs} href="#join-us">
             Join Us
           </a>
@@ -37,7 +37,7 @@ const Hero = () => {
         </div>
         <div className={style.heroPictureWrap}>
           <img
-            className={style.bgroundPC}
+            className={`${style.bgroundPC}`}
             src="/assets/img/background-removebg-preview.png"
             alt="background"
             // width="570"
