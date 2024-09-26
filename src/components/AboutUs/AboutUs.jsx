@@ -42,11 +42,8 @@ const AboutUs = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic sunt
               dolorum enim aliquid, quae dolore fugit, deleniti aperiam error
               nemo voluptates modi fugiat eligendi delectus tempore magni
-              perferendis quam. Id! Nisi doloribus dignissimos quod impedit
-              reiciendis fugiat at adipisci, ipsum ducimus et libero ullam
-              molestiae aperiam quidem. Voluptatibus reiciendis voluptatem et
-              quaerat voluptate neque molestiae ad! Maiores culpa veritatis
-              architecto? Iure quia harum quam inventore! Delectus illum commodi
+              perferendis quam. Id! Maiores culpa veritatis
+              architecto? Iure quiam inventore! Delectus illum commodi
               quam sapiente numquam. Cum fugiat eaque rerum aperiam porro
               accusantium consectetur, id perspiciatis, aspernatur repellat
               nemo? Amet esse dolorum earum quo itaque.
