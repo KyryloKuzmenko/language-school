@@ -4,7 +4,7 @@ const AboutUs = () => {
   return (
     <section className={`${css.aboutUsSection} container`}>
       <div className={css.wrap}>
-        <h2 className={`${css.titleMobile} ${css.titlePC}`}>About Us</h2>
+        <h2 className={`${css.titleMobile}`}>About Us</h2>
         <div className={css.aboutUsWrap}>
           <div className={css.imgWrap}>
             <img
@@ -36,19 +36,22 @@ const AboutUs = () => {
               alt="woman-with-laptop"
             />
           </div>
+          <div className={css.textWrap}>
+            <h2 className={`${css.titlePC}`}>About Us</h2>
             <p className={css.text}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic sunt
-              dolorum enim aliquid, quae dolore fugit, deleniti aperiam error nemo
-              voluptates modi fugiat eligendi delectus tempore magni perferendis
-              quam. Id! Nisi doloribus dignissimos quod impedit reiciendis fugiat
-              at adipisci, ipsum ducimus et libero ullam molestiae aperiam quidem.
-              Voluptatibus reiciendis voluptatem et quaerat voluptate neque
-              molestiae ad! Maiores culpa veritatis architecto? Iure quia harum
-              quam inventore! Delectus illum commodi quam sapiente numquam. Cum
-              fugiat eaque rerum aperiam porro accusantium consectetur, id
-              perspiciatis, aspernatur repellat nemo? Amet esse dolorum earum quo
-              itaque.
+              dolorum enim aliquid, quae dolore fugit, deleniti aperiam error
+              nemo voluptates modi fugiat eligendi delectus tempore magni
+              perferendis quam. Id! Nisi doloribus dignissimos quod impedit
+              reiciendis fugiat at adipisci, ipsum ducimus et libero ullam
+              molestiae aperiam quidem. Voluptatibus reiciendis voluptatem et
+              quaerat voluptate neque molestiae ad! Maiores culpa veritatis
+              architecto? Iure quia harum quam inventore! Delectus illum commodi
+              quam sapiente numquam. Cum fugiat eaque rerum aperiam porro
+              accusantium consectetur, id perspiciatis, aspernatur repellat
+              nemo? Amet esse dolorum earum quo itaque.
             </p>
+          </div>
         </div>
       </div>
     </section>

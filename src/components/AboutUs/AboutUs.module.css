@@ -1,5 +1,4 @@
-
-
+/* Стили для мобильных устройств */
 .wrap {
   margin-top: 30px;
   display: flex;
@@ -13,15 +12,13 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 10px;
-  min-width: 300px;
+  width: 100%;
 }
 
 .aboutUsImg {
-    width: calc(
-    50% - 10px
-  ); /* Картинки занимают половину ширины контейнера, минус отступ */
-  height: auto; 
-  max-width: 100%; 
+  width: calc(50% - 10px); /* Два изображения в ряду */
+  height: auto;
+  max-width: 100%;
 }
 
 .titlePC {
@@ -44,47 +41,82 @@
   font-size: 14px;
   line-height: 1.42857;
   letter-spacing: 0.01em;
-  text-align: center;
   color: #737373;
+  text-align: justify;
 }
 
+.aboutUsWrap {
+  margin-bottom: 60px; /* Добавляем нижний отступ для предыдущей секции */
+}
+
+/* Стили для планшетов */
 @media only screen and (min-width: 768px) {
-  .aboutUsWrap {
-    display: flex;
-    align-items: center;
+  .wrap {
+    max-height: 400px;
   }
 
-  .aboutUsImg {
-    flex: 0 1 calc(50% - 10px); /* Продолжаем использовать две картинки по горизонтали */
+  .aboutUsWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
 
   .titleMobile {
-    display: none;
-  }
-
-  .titlePC {
-    display: block;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 35px;
     line-height: 1.25;
     letter-spacing: 0.01em;
-    text-align: center;
+    text-align: left;
     color: #252b42;
   }
 
+
   .imgWrap {
     justify-content: flex-start;
+    max-width: 470px;
   }
 
+  .aboutUsImg {
+    flex: 0 1 calc(50% - 10px); /* Два изображения в ряду */
+  }
+
+  .textWrap {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
 }
 
-
+/* Стили для компьютеров */
 @media only screen and (min-width: 1440px) {
-  .aboutUsImg {
-    flex: 0 1 calc(50% - 10px); /* Продолжаем использовать две картинки по горизонтали */
+  .aboutUsWrap {
+    max-width: 100%;
+    margin: 0 auto;
   }
 
   .imgWrap {
-     min-width: 800px;
+    max-width: 570px;
+  }
+
+  .aboutUsImg {
+    flex: 0 1 calc(25% - 10px); /* Четыре изображения в ряду */
+  }
+
+  .textWrap {
+    max-width: 600px;
+    margin-left: 70px;
+  }
+
+  .titlePC {
+    font-size: 48px;
+  }
+
+  .text {
+    font-size: 16px;
+    line-height: 1.6;
   }
 }
+
