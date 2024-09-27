@@ -1,11 +1,12 @@
 import css from "./JoinUs.module.css"
+import { NavLink } from "react-router-dom";
 
 
 const JoinUs = () => {
 
     return (
       <div className={css.joinUs}>
-        <a className={css.contactFormBtn} href="#contact-form">
+        <NavLink className={css.contactFormBtn} to="/register">
           JOIN US
           <span className={css.span}>
             <svg
@@ -25,7 +26,7 @@ const JoinUs = () => {
               </g>
             </svg>
           </span>
-        </a>
+        </NavLink>
       </div>
     );
 }
