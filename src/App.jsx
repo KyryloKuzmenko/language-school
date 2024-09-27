@@ -5,6 +5,7 @@ import Hero from './components/Hero/Hero'
 import PopularCourses from './components/PopularCourses/PopularCourses'
 import AboutUs from './components/AboutUs/AboutUs'
 import Footer from './components/Footer/Footer'
+import UserForm from './components/UserForm/UserForm'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <AboutUs />
       <PopularCourses />
       <Footer />
+      <UserForm />
     </>
   )
 }
