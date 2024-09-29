@@ -1,13 +1,21 @@
+import { NavLink, useNavigate } from 'react-router-dom';
 import style from './Hero.module.css';
 
 const Hero = () => {
+  const navigate = useNavigate();
+
+  const handleJoinUsClick = () => {
+    navigate('/register');
+  }
+
+
   return (
     <section className={`${style.heroSection} container`}>
       <div className={style.wrapHero}>
         <div className={style.hero}>
-          <a className={style.linkJoinUs} href="#join-us">
+          <NavLink className={style.linkJoinUs} to="/register">
             Join Us
-          </a>
+          </NavLink>
           <h1 className={style.heroTitle}>HIGH QUALITY COURSES </h1>
           <div className={`${style.heroPictureContainer}`}>
             <img
@@ -31,7 +39,7 @@ const Hero = () => {
             Every day brings with it a fresh set of learning possibilities.
           </p>
           <div className={style.btnWrap}>
-            <button className={style.joinUs}>Join Us</button>
+            <button className={style.joinUs} onClick={handleJoinUsClick}>Join Us</button>
             <button className={style.learnMore}>Learn More</button>
           </div>
         </div>

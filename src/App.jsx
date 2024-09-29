@@ -1,21 +1,36 @@
-import { lazy, useEffect } from 'react'
-import { Route, Routes } from 'react-router-dom'
-import { Suspense } from 'react'
+import { lazy, useEffect } from 'react';
+import { Route, Routes, useLocation } from 'react-router-dom';
+import { Suspense } from 'react';
 
-import Header from './components/Header/Header'
+import Header from './components/Header/Header';
+import './App.css';
+import Hero from './components/Hero/Hero';
+import PopularCourses from './components/PopularCourses/PopularCourses';
+import AboutUs from './components/AboutUs/AboutUs';
+import Footer from './components/Footer/Footer';
+import { useDispatch, useSelector } from 'react-redux';
+import { hideForm, showForm } from './redux/form/formSlice';
 
-import './App.css'
-import Hero from './components/Hero/Hero'
-import PopularCourses from './components/PopularCourses/PopularCourses'
-import AboutUs from './components/AboutUs/AboutUs'
-import Footer from './components/Footer/Footer'
-
-const RegistrationPage = lazy(() => import('../src/pages/RegistrationPage/RegistrationPage'))
+const RegistrationPage = lazy(() =>
+  import('../src/pages/RegistrationPage/RegistrationPage')
+);
 
 function App() {
+  const dispatch = useDispatch();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === '/register') {
+      dispatch(showForm());
+    } else {
+      dispatch(hideForm());
+    }
+  }, [location.pathname, dispatch]);
+  
 
   return (
     <>
+      <Header />
       <Routes>
         <Route
           path="/register"
@@ -25,12 +40,10 @@ function App() {
             </Suspense>
           }
         />
-
         <Route
           path="/"
           element={
             <>
-              <Header />
               <Hero />
               <AboutUs />
               <PopularCourses />
@@ -43,4 +56,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

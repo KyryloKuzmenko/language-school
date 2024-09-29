@@ -1,7 +1,10 @@
 import { Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
-
 import css from './UserForm.module.css';
+import { useDispatch } from 'react-redux';
+import { hideForm } from '../../redux/form/formSlice';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 // Валидация с помощью Yup
 const validationSchema = Yup.object({
@@ -25,75 +28,93 @@ const UserForm = () => {
     language: '',
   };
 
-    return (
-      <div className={css.formWrap}>
-    <Formik
-      initialValues={INITIAL_VALUES}
-      validationSchema={validationSchema}
-      onSubmit={values => {
-        console.log('DATA', values);
-      }}
-    >
-      {({ errors, touched }) => (
-        <Form className={`${css.form} container`}>
-          <label className={css.label} htmlFor="nameField">
-            <span>Name</span>
-          </label>
-          <Field
-            className={css.userName}
-            type="text"
-            name="name"
-            id="nameField"
-          />
+  const dispatch = useDispatch();
+  const navigate = useNavigate(); // Хук для навигации
+  const [submitted, setSubmitted] = useState(false); // Состояние для отслеживания отправки формы
 
-          {errors.name && touched.name ? <div>{errors.name}</div> : null}
+  const handleSubmit = (values, { resetForm }) => {
+    console.log('Data', values);
+    resetForm(); // Сбрасываем значения формы
+    dispatch(hideForm()); // Скрываем форму
+    setSubmitted(true); // Устанавливаем состояние отправки формы
 
-          <label className={css.label} htmlFor="numberField">
-            <span>Phone Number</span>
-          </label>
-          <Field
-            className={css.userNumber}
-            type="text"
-            name="number"
-            id="numberField"
-          />
+    // Перенаправляем на главную страницу через 5 секунд
+    setTimeout(() => {
+      navigate('/');
+    }, 5000);
+  };
 
-          {errors.number && touched.number ? <div>{errors.number}</div> : null}
+  return (
+    <div className={css.formWrap}>
+      {submitted ? (
+        <div className={css.message}>
+          <h2>Мы с вами свяжемся!</h2>
+        </div>
+      ) : (
+        <Formik
+          initialValues={INITIAL_VALUES}
+          validationSchema={validationSchema}
+          onSubmit={handleSubmit}
+        >
+          {({ errors, touched }) => (
+            <Form className={`${css.form} container`}>
+              <label className={css.label} htmlFor="nameField">
+                <span>Name</span>
+              </label>
+              <Field
+                className={css.userName}
+                type="text"
+                name="name"
+                id="nameField"
+              />
+              {errors.name && touched.name ? <div>{errors.name}</div> : null}
 
-          <label className={css.label} htmlFor="emailField">
-            <span>Email</span>
-          </label>
-          <Field
-            className={css.email}
-            type="text"
-            name="email"
-            placeholder="example@gmail.com"
-            id="emailField"
-          />
+              <label className={css.label} htmlFor="numberField">
+                <span>Phone Number</span>
+              </label>
+              <Field
+                className={css.userNumber}
+                type="text"
+                name="number"
+                id="numberField"
+              />
+              {errors.number && touched.number ? (
+                <div>{errors.number}</div>
+              ) : null}
 
-          {errors.email && touched.email ? <div>{errors.email}</div> : null}
+              <label className={css.label} htmlFor="emailField">
+                <span>Email</span>
+              </label>
+              <Field
+                className={css.email}
+                type="text"
+                name="email"
+                placeholder="example@gmail.com"
+                id="emailField"
+              />
+              {errors.email && touched.email ? <div>{errors.email}</div> : null}
 
-          <label className={css.label} htmlFor="lang">
-            <span>Language</span>
-          </label>
-          <Field as="select" name="language" id="lang">
-            <option value="">Select Language</option>
-            <option value="Ukrainian">Ukrainian</option>
-            <option value="English">English</option>
-            <option value="Frances">Frances</option>
-          </Field>
+              <label className={css.label} htmlFor="lang">
+                <span>Language</span>
+              </label>
+              <Field as="select" name="language" id="lang">
+                <option value="">Select Language</option>
+                <option value="Ukrainian">Ukrainian</option>
+                <option value="English">English</option>
+                <option value="Frances">Frances</option>
+              </Field>
+              {errors.language && touched.language ? (
+                <div>{errors.language}</div>
+              ) : null}
 
-          {errors.language && touched.language ? (
-            <div>{errors.language}</div>
-          ) : null}
-
-          <button className={css.submitBtn} type="submit">
-            Submit
-          </button>
-        </Form>
+              <button className={css.submitBtn} type="submit">
+                Submit
+              </button>
+            </Form>
+          )}
+        </Formik>
       )}
-    </Formik>
-      </div>
+    </div>
   );
 };
 
